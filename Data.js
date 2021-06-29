@@ -58,7 +58,7 @@ export const getUnsafestCountriesNames = async () => {
 export const getWeatherInfo = async (countryName) => {
   try {
     const data = await requestAPI(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${countryName}&appid=bc140749bfaa913b1e02e5992fb1f553`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${countryName}&appid=bc140749bfaa913b1e02e5992fb1f553`
     );
     const { temp } = data.list[0].main;
     const { main } = data.list[0].weather[0];
